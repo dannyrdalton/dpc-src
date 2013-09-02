@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html ng-app="mvhd" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>MVHD</title>
+	<link rel="stylesheet" href="stylesheets/style.css" />
+</head>
+<body ng-controller="AppCtrl">
+	<div class="header">
+
+	</div>
+	hello there {{name}}!
+	<div ng-repeat="video in videos">
+		<iframe ng-src="http://player.vimeo.com/video/{{video.vimeoId}}" width="WIDTH" height="HEIGHT" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+
+	</div>
+</body>
+<script type="text/javascript" src="javascripts/lib/angular.min.js"></script>
+<script type="text/javascript" src="javascripts/app/main.js"></script>
+<script type="text/javascript" src="javascripts/config/routes.js"></script>
+<script type="text/javascript" src="javascripts/config/push-state.js"></script>
+<script type="text/javascript" src="javascripts/config/utf8.js"></script>
+<script type="text/javascript" src="javascripts/app/controllers/application-controller.js"></script>
+<script type="text/javascript" src="javascripts/app/services/video-service.js"></script>
+</html>
